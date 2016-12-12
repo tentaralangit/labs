@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+&lt;head&gt;
+<script>
+/*<![CDATA[
+ ______   __  __     ______    
+/\  ___\ /\_\_\_\   /\  == \   
+\ \  __\ \/_/\_\/_  \ \  __<   
+ \ \_\     /\_\/\_\  \ \_\ \_\ 
+  \/_/     \/_/\/_/   \/_/ /_/ 
+
+ © Copyleft - FXR 2016.12.12
+ Tentaralangit/7
+ Line: fxrrr
+ 
+]]>*/
+</script>
+<title><data:blog.pageTitle/></title>
+<meta expr:content='data:view.description.escaped' name='description'/>
+<meta content='' name='keywords'/>
+<meta content='' name='copyright'/>
+<meta content='ID' name='language'/>
+<meta content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no' name='viewport'/>
+<link expr:href='data:blog.blogspotFaviconUrl' rel='icon' type='image/x-icon'/>
+<link expr:href='data:view.url.canonical' rel='canonical'/>
+<meta expr:content='data:view.url.canonical' property='og:url'/>
+<meta expr:content='data:view.title.escaped' property='og:title'/>
+<meta expr:content='data:view.description.escaped' property='og:description'/>
+
+<link rel='alternate' type='application/atom+xml' title='FXR-blogger - Atom' href='http://xxx/feeds/posts/default' />
+<link rel='alternate' type='application/rss+xml' title='FXR-blogger - RSS' href='http://xxx/feeds/posts/default?alt=rss' />
+<link rel='service.post' type='application/atom+xml' title='FXR-blogger - Atom' href='https://www.blogger.com/feeds/1048694498853011397/posts/default' />
+
+<script src='x//code.jquery.com/jquery-3.1.1.min.js'/>
+<script src='x//cdn.rawgit.com/hidrox/indosupplier/6650489cce16b7a36c3ec527c0889fc05b798833/main.js'/>
+<link href='x//cdn.rawgit.com/hidrox/indosupplier/62036040bd7bac4048f01e0807477deb03034afc/main.css' rel='stylesheet'/>
+&lt;/head&gt;
+&lt;body&gt;
+
+
+
+<b:section id='blog'>
+<b:widget id='Blog1' locked='false' title='Posting Blog' type='Blog' version='1' visible='false'>
+  <!--
+  Edited: FXR 2016.12.12
+  Jonathan Mettes
+    gist.github.com/jmettes/858216/fe4f920766d0ee1be9ea2e7bda0c2f1a9f4157f6
+    github.com/jmettes/Bare-bones-Blogger-Template/blob/master/template.xml
+  -->
+  <!-- Main -->
+  <b:includable id='main' var='post'>
+    <b:include name='Postings'/>
+    <b:include name='nextprev'/>
+  </b:includable>
+
+  <!-- Post(s) -->
+  <b:includable id='Postings'>
+    <b:loop values='data:posts' var='post'><b:include data='post' name='post'/></b:loop>
+  </b:includable>
+  
+  <!-- Labels -->
+  <b:includable id='labels' var='post'>
+    <b:if cond='data:post.labels'>Labels: 
+      <b:loop values='data:post.labels' var='label'>
+      <a expr:href='data:label.url' rel='tag'><data:label.name/></a>
+      <b:if cond='data:label.isLast != &quot;true&quot;'>, </b:if>
+    </b:loop>
+    </b:if>
+  </b:includable>
+
+  <!-- Pagination -->
+  <b:includable id='nextprev'>
+    <b:if cond='data:olderPageUrl'><a expr:href='data:olderPageUrl'><data:olderPageTitle/></a></b:if>
+    <b:if cond='data:blog.pageType != &quot;index&quot;'><a href='/'>Home</a></b:if>
+    <b:if cond='data:newerPageUrl'><a expr:href='data:newerPageUrl'><data:newerPageTitle/></a></b:if>
+  </b:includable>
+  
+  <!-- Post -->  
+  <b:includable id='post' var='post'>
+    <data:post.dateHeader/>
+    <h2><a expr:href='data:post.url'><data:post.title/></a></h2>
+    <b:include data='post' name='labels'/><br/>
+    <data:post.body/>
+  </b:includable>
+  
+  <b:includable id='postQuickEdit'/>
+  <b:includable id='shareButtons'/>
+  <b:includable id='status-message'/>
+  <b:includable id='threaded-comment-form' var='post'/>
+  <b:includable id='threaded_comment_js' var='post'/>
+  <b:includable id='threaded_comments' var='post'/>
+  <b:includable id='backlinkDeleteIcon'/>
+  <b:includable id='backlinks'/>
+  <b:includable id='comment-form'/>
+  <b:includable id='commentDeleteIcon'/>
+  <b:includable id='comment_count_picker' var='post'/>
+  <b:includable id='comment_picker' var='post'/>
+  <b:includable id='comments' var='post'/>
+  <b:includable id='feedLinks'/>
+  <b:includable id='feedLinksBody'/>
+  <b:includable id='iframe_comments' var='post'/>
+  <b:includable id='mobile-index-post'/>
+  <b:includable id='mobile-main' var='top'/>
+  <b:includable id='mobile-nextprev'/>
+  <b:includable id='mobile-post' var='post'/>
+  
+</b:widget>
+</b:section>
+
+<b:skin><![CDATA[]]></b:skin>
+&lt;!--<head/>--&gt;
+&lt;!--<body/>--&gt;
+&lt;/body&gt;
+</html>
+
+
